@@ -12,12 +12,13 @@ public class LowerBoundInBinarySearch {
         int low = 0,high = n-1, ans = n;
         while(low <= high){
             int mid = (low + high)/2;
+            // We try to find the element that is >= x and also the smallest possible index
             if(arr[mid] >= x){
-                ans = mid;
-                high = mid - 1;
+                ans = mid;  // we assume the smallest that is found untill is mid everytime untill the smallest index is found.
+                high = mid - 1; // we will the search for the smallest index possible
             }
             else{
-                low = mid + 1;
+                low = mid + 1; // if the arr[mid] < x then we will try to find the other half of the search space.
             }
         }
         return ans;
