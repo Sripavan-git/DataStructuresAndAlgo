@@ -3,11 +3,13 @@ package BinarySearch;
 public class FirstAndLastOccurence {
     public static void main(String[] args) {
 
-        int[] nums = {5,7,7,8,8,10};
-        int target = 8;
+        int[] nums = {1,1, 2, 2, 2, 2, 3};
+        int target = 4;
         int first = findFirst(nums, nums.length, target);
         int last = findLast(nums, nums.length, target);
-        System.out.println(first + " " + last);
+//        System.out.println(first + " " + last);
+        
+        System.out.println(last - first + 1);
     }
 
     public static int findFirst(int[] nums, int n,int x){
